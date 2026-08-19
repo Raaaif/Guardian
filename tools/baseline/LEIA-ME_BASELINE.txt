@@ -1,0 +1,46 @@
+GUARDIAN - CRIAÇÃO DA PRIMEIRA BASE OFICIAL
+
+O que estamos construindo:
+1. Baseline oficial do CS 1.6 Steam.
+2. Lista de programas permitidos.
+3. Lista de indicadores bloqueados.
+4. Comparação futura dentro do Guardian.
+
+PASSO A PASSO
+
+1. Use um computador confiável.
+2. Abra a Steam.
+3. Clique com o botão direito em Counter-Strike.
+4. Propriedades > Arquivos instalados.
+5. Clique em "Verificar integridade dos arquivos".
+6. Aguarde terminar.
+7. Não instale mods, skins ou DLLs de terceiros.
+8. Execute GERAR_BASELINE_OFICIAL.bat.
+9. Selecione a pasta:
+   ...\Steam\steamapps\common\Half-Life
+10. Guarde a pasta gerada em tools\baseline\output.
+
+RESULTADOS
+
+approved_game_files.json
+Manifesto completo para consumo pelo Guardian.
+
+approved_game_files.csv
+Pode ser importado ou conferido em planilha.
+
+approved_game_files_import.sql
+Pode ser executado no Supabase após criar as tabelas.
+
+RESUMO.txt
+Contagem de arquivos e SHA-256 do manifesto.
+
+IMPORTANTE
+
+A baseline informa quais arquivos pertenciam a uma instalação limpa e validada.
+Ela não detecta sozinha cheats externos, injeção de memória ou drivers.
+Essas outras camadas serão adicionadas usando:
+- processos e assinaturas;
+- módulos carregados no hl.exe;
+- drivers e serviços;
+- indicadores bloqueados;
+- comparação do estado antes e durante a partida.

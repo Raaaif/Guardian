@@ -1,0 +1,32 @@
+[
+  {
+    "product": "Steam",
+    "process": "steam.exe",
+    "publisher": "Valve Corp.",
+    "action": "allow"
+  },
+  {
+    "product": "Discord",
+    "process": "discord.exe",
+    "publisher": "Discord Inc.",
+    "action": "allow"
+  },
+  {
+    "product": "Spotify",
+    "process": "spotify.exe",
+    "publisher": "Spotify AB",
+    "action": "allow"
+  },
+  {
+    "product": "OBS Studio",
+    "process": "obs64.exe",
+    "publisher": "OBS Project",
+    "action": "allow"
+  },
+  {
+    "product": "NVIDIA App",
+    "process": "NVIDIA Share.exe",
+    "publisher": "NVIDIA Corporation",
+    "action": "allow"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "steam-invalid",
+    "type": "finding_code",
+    "pattern": "PNET-STEAM-001",
+    "severity": "review",
+    "scoreImpact": 25,
+    "description": "Instalação Steam não validada",
+    "enabled": true
+  },
+  {
+    "id": "known-manipulation-tool",
+    "type": "finding_code",
+    "pattern": "PNET-SCAN-PROCESS-001",
+    "severity": "suspect",
+    "scoreImpact": 30,
+    "description": "Ferramenta de manipulação detectada",
+    "enabled": true
+  },
+  {
+    "id": "unknown-game-module",
+    "type": "finding_code",
+    "pattern": "PNET-SCAN-MODULE-002",
+    "severity": "review",
+    "scoreImpact": 12,
+    "description": "Módulo externo desconhecido",
+    "enabled": true
+  },
+  {
+    "id": "suspicious-game-file",
+    "type": "finding_code",
+    "pattern": "PNET-SCAN-FILE-004",
+    "severity": "suspect",
+    "scoreImpact": 25,
+    "description": "Arquivo com indicador suspeito",
+    "enabled": true
+  },
+  {
+    "id": "baseline-missing",
+    "name": "Baseline oficial ausente",
+    "pattern": "GUARDIAN-BASELINE-001",
+    "category": "integrity",
+    "scoreImpact": 8,
+    "severity": "review",
+    "enabled": true,
+    "description": "A integridade dos arquivos críticos não pôde ser confirmada."
+  },
+  {
+    "id": "critical-file-missing",
+    "name": "Arquivo crítico ausente",
+    "pattern": "GUARDIAN-INTEGRITY-MISSING-002",
+    "category": "integrity",
+    "scoreImpact": 25,
+    "severity": "suspect",
+    "enabled": true,
+    "description": "Arquivo obrigatório da instalação Steam não foi encontrado."
+  },
+  {
+    "id": "critical-file-changed",
+    "name": "Arquivo crítico alterado",
+    "pattern": "GUARDIAN-INTEGRITY-CHANGED-003",
+    "category": "integrity",
+    "scoreImpact": 30,
+    "severity": "suspect",
+    "enabled": true,
+    "description": "Hash diferente da baseline oficial para arquivo crítico."
+  }
+]

@@ -1,0 +1,5 @@
+Guardian MVP - uso interno e avaliação.
+
+Você pode modificar e distribuir este código dentro do projeto PNET.
+O software é fornecido sem garantia. Revise requisitos legais, de
+privacidade e segurança antes de uso público.

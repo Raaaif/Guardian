@@ -1,0 +1,27 @@
+GUARDIAN v8.1 — FLUXO SIMPLIFICADO
+
+Você não precisa decorar as etapas.
+
+1. Abra o Guardian.
+2. Clique em CONFIGURAÇÃO INICIAL.
+3. Instale o arquivo approved_game_files.json gerado na sua instalação limpa.
+4. Escolha onde os relatórios serão salvos.
+5. Na partida, o jogador apenas preenche os dados, executa o scan e inicia a sessão.
+
+O que a baseline compara rigidamente:
+- hl.exe
+- hw.dll
+- sw.dll
+- filesystem_stdio.dll
+- steam_api.dll
+- cstrike\cl_dlls\client.dll
+
+O que NÃO é reprovado apenas por ser diferente:
+- config.cfg, userconfig.cfg e autoexec.cfg
+- mapas, sons, models e sprites baixados
+- demos e screenshots
+- Discord, Spotify e OBS apenas por estarem abertos
+
+LIMITAÇÃO HONESTA
+Essa versão valida integridade crítica, processos, módulos e alterações durante a sessão.
+Ela não garante detectar todo cheat existente, especialmente cheats privados, externos ou em kernel.

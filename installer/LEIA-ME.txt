@@ -1,0 +1,23 @@
+GUARDIAN - GERAR INSTALADOR
+
+1. Instale o Inno Setup 6.
+2. Abra a pasta "installer".
+3. Execute "gerar_instalador.bat".
+4. Aguarde o build do aplicativo e do instalador.
+5. O arquivo final será criado em:
+
+   installer\output\PNETGuard_Setup_v6.exe
+
+O instalador:
+- inclui o runtime do .NET;
+- não exige que o jogador instale o .NET;
+- instala no perfil do usuário;
+- mantém o ícone do Guardian;
+- cria entrada no Menu Iniciar;
+- permite criar atalho na área de trabalho;
+- inclui desinstalador;
+- abre o programa ao concluir.
+
+IMPORTANTE:
+O instalador reduz problemas de arquivos ausentes, mas o Windows SmartScreen ainda
+pode mostrar aviso enquanto o programa não possuir certificado digital de assinatura.

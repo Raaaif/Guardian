@@ -1,0 +1,20 @@
+GUARDIAN v8 ENTERPRISE
+
+O nome do produto foi alterado de PNET Guard para Guardian.
+
+PRINCIPAIS NOVIDADES
+- Tela de destino preservada e ampliada: local, Supabase ou API/Webhook universal.
+- Motor de regras externo em rules\guardian_rules.json.
+- Lista inicial de permitidos em rules\allowed_software.json.
+- Score de 0 a 100 e classificação approved/review/rejected/confirmed_cheat.
+- Discord, Spotify, Steam, OBS e NVIDIA aparecem como softwares permitidos iniciais.
+- Kit de baseline oficial mantido.
+
+SEGURANÇA
+- Não coloque senha direta de MySQL/PostgreSQL no cliente.
+- Para outros bancos, configure uma API HTTPS que receba o JSON e grave no banco.
+- Use somente anon key no Supabase; nunca service_role.
+
+COMPILAÇÃO
+Execute publish.bat. Depois execute installer\gerar_instalador.bat.
+Este pacote não foi compilado neste ambiente porque o .NET SDK não está instalado.

@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>false</PublishTrimmed>
+    <AssemblyName>Guardian</AssemblyName>
+    <RootNamespace>PNETGuard</RootNamespace>
+    <Version>9.1.0</Version>
+    <FileVersion>9.1.0.0</FileVersion>
+    <AssemblyVersion>9.1.0.0</AssemblyVersion>
+    <ApplicationIcon>assets\image.ico</ApplicationIcon>
+    <Win32Icon>assets\image.ico</Win32Icon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="assets\image.png" LogicalName="Guardian.Assets.image.png" />
+    <Content Include="assets\image.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="assets\image.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+
+    <Content Include="rules\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+
+    <Content Include="intelligence\approved_game_files.json" Condition="Exists('intelligence\approved_game_files.json')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

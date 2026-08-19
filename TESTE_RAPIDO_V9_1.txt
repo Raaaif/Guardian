@@ -1,0 +1,43 @@
+GUARDIAN v9.1 — TESTE RÁPIDO
+
+1. Confirme seus dados em:
+   Services\GuardianServerConfig.cs
+
+2. Confirme que executou no Supabase:
+   supabase\schema_guardian_v9.sql
+
+3. Gere novamente com:
+   publish.bat
+
+4. TESTE DO SCAN:
+   Crie o arquivo:
+   cheat.txt
+
+   O arquivo deve ficar DENTRO da pasta selecionada do CS, por exemplo:
+   C:\Program Files (x86)\Steam\steamapps\common\Half-Life\cstrike\cheat.txt
+
+   Execute o scan.
+   Ele deve acusar GUARDIAN-KEYWORD-FILE-005.
+
+5. TESTE DA SESSÃO:
+   Primeiro retire cheat.txt e faça um scan limpo.
+   Inicie a sessão segura.
+   Depois crie cheat.txt dentro da pasta do CS.
+   Em até aproximadamente 5 segundos ele deve gerar:
+   secure_session_file_finding
+
+6. LOG DO SUPABASE:
+   Abra:
+   %LOCALAPPDATA%\Guardian\Logs\supabase.log
+
+   OK = enviado.
+   HTTP 401 = chave incorreta.
+   HTTP 404 = URL/tabela incorreta.
+   HTTP 400 = estrutura da tabela incompatível.
+   HTTP 403 = política RLS bloqueando.
+   IGNORADO = GuardianServerConfig.cs não foi preenchido antes do publish.
+
+IMPORTANTE:
+Abrir um arquivo cheat.txt fora da pasta do CS não é detectado.
+Um arquivo TXT aberto no Bloco de Notas não vira um processo chamado cheat;
+o processo continua sendo notepad.exe.

@@ -1,0 +1,68 @@
+GUARDIAN v9 — VERSÃO SIMPLIFICADA
+
+OBJETIVO
+Esta versão não usa score complexo, análise de overlays ou regras genéricas.
+Ela executa apenas três camadas:
+
+1. Integridade dos arquivos críticos originais.
+2. Busca por palavras-chave fortes em arquivos e processos.
+3. Sessão segura com envio ao servidor a cada 5 segundos.
+
+ANTES DE COMPILAR
+
+BANCO:
+Abra Services\GuardianServerConfig.cs e preencha:
+- SupabaseUrl
+- SupabaseAnonKey
+- EventsTable
+
+Use apenas a chave ANON.
+Execute supabase\schema_guardian_v9.sql no seu Supabase.
+
+BASELINE:
+1. Valide o Counter-Strike pela Steam.
+2. Execute tools\baseline\GERAR_BASELINE_OFICIAL.bat.
+3. Copie approved_game_files.json para intelligence\approved_game_files.json.
+
+O JOGADOR NÃO PODE:
+- alterar a URL do banco pela tela;
+- alterar a chave;
+- alterar a tabela;
+- trocar a baseline;
+- iniciar sessão sem scan aprovado.
+
+ARQUIVOS CRÍTICOS COMPARADOS
+- hl.exe
+- hw.dll
+- sw.dll
+- filesystem_stdio.dll
+- steam_api.dll
+- cstrike\cl_dlls\client.dll
+
+PALAVRAS-CHAVE FORTES
+- cheatengine
+- extremeinjector
+- dllinjector
+- wallhack
+- aimbot
+- triggerbot
+- ragebot
+- silentaim
+- speedhack
+
+Discord, Spotify, Steam e OBS não são acusados por estarem abertos.
+Módulos e overlays externos não são classificados como cheat nesta versão.
+
+EVENTOS ENVIADOS AO BANCO
+- scan_started
+- scan_finding
+- scan_finished
+- session_started
+- secure_session_check (a cada 5 segundos)
+- heartbeat (a cada 5 segundos)
+- secure_session_keyword_finding
+- session_finished
+
+IMPORTANTE
+A chave ANON continuará tecnicamente presente no executável.
+Proteja o Supabase com RLS de INSERT apenas. Nunca use service_role.
